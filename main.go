@@ -12,7 +12,7 @@ func main() {
 		fmt.Printf("OPEN: %s\n", err.Error())
 		return
 	}
-	err = socket.Connect(sockfd, socket.SocketAddressInet{Port: 9999})
+	err = socket.Connect(sockfd, socket.SocketAddressInet{Address: "127.0.0.1", Port: 9999})
 	if err != nil {
 		fmt.Printf("CONNECT: %s\n", err.Error())
 		return
